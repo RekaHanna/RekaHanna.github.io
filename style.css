@@ -1,0 +1,102 @@
+body{
+    margin:0;
+    /* Eltávolítja a böngésző alap margóját */
+    min-height:100vh;
+    /* Az oldal minimum magassága a teljes képernyő */
+    display:flex;
+    /* Flexbox elrendezés bekapcsolása */
+    justify-content:center;
+    /* Vízszintesen középre igazítja a tartalmat */
+    align-items:center;
+    /* Függőlegesen középre igazítja a tartalmat */
+    flex-direction:column;
+    /* Az elemek egymás alatt helyezkednek el */
+    position:relative;
+    /* Szükséges az ::before és ::after pozicionálásához */
+    overflow:hidden;
+    /* Elrejti a kilógó tartalmat */
+    background: linear-gradient(135deg, #01167a 10%, #0c449f 55%, #01167a 100%);
+    /* Háttér színátmenet */
+    color:#00ffe5;
+    /* Alap szövegszín */
+    font-family:Arial, sans-serif;
+    /* Betűtípus beállítása */
+}
+
+body::before{
+/* A body elé beszúrt extra réteg */
+    content:'';
+    /* Kötelező pseudo-element használatához */
+    position:absolute;
+    /* Szabad pozicionálás */
+    inset:0;
+    /* Kitölti az egész body területét */
+    opacity:0.8;
+    /* Átlátszóság */
+    pointer-events:none;
+    /* Nem akadályozza az egérkattintásokat */
+}
+
+body::after{
+/* A body mögé kerülő mintázat */
+    content:'';
+    /* Kötelező pseudo-elementhez */
+    position:absolute;
+    /* Szabad pozicionálás */
+    inset:0;
+    /* Teljes képernyőt kitölti */
+    background-image: radial-gradient(circle, rgba(0, 255, 247, 0.9) 1px, transparent 1px);
+    /* Kör alakú pöttyökből álló háttérminta */
+    background-size: 70px 70px;
+    /* A minta ismétlődésének mérete */
+    opacity: 0.2;
+    /* Halvány háttérminta */
+    pointer-events:none;
+    /* Nem blokkolja a kattintásokat */
+}
+
+button{
+/* Gomb stílusa */
+    padding:15px 20px;
+    /* Belső térköz */
+    border:none;
+    /* Keret eltávolítása */
+    border-radius:20px;
+    /* Lekerekített sarkok */
+    cursor:pointer;
+    /* Egérmutató kézzé változik */
+    background:linear-gradient(135deg, #00ffe5);
+    /* Gomb háttérszíne */
+    color:#0b1220;
+    /* Gomb szövegszíne */
+    font-weight:bold;
+    /* Félkövér szöveg */
+    margin-bottom:30px;
+    /* Távolság lefelé */
+}
+
+.card{
+/* A karakter kártya stílusa */
+    background:rgba(0, 0, 0, 0.337);
+    /* Félig átlátszó háttér */
+    padding:20px;
+    /* Belső térköz */
+    border-radius:20px;
+    /* Lekerekített sarkok */
+    text-align:center;
+    /* Szöveg középre igazítása */
+    width:270px;
+    /* Kártya szélessége */
+    border:1px solid #00ffe5;
+    /* Világító szegély */
+    box-shadow:0 24px 60px rgba(0,0,1,0.8);
+    /* Árnyék effekt */
+}
+
+img{
+/* A karakter képe */
+    width:100%;
+    /* A kép kitölti a kártya szélességét */
+    border-radius:10px;
+    /* Lekerekített sarkok */
+}
