@@ -8,11 +8,8 @@ async function getCharacter(){
   // +1 -> hogy 1-től induljon
   const res = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
     // Lekérés küldése az API-nak a kiválasztott karakterhez
-  // await megvárja, amíg megérkezik a válasz
   const data = await res.json();
   // A válasz JSON formátumának átalakítása JavaScript objektummá
-  // await megvárja az átalakítást
-
   document.getElementById("card").innerHTML = `
 
     <div class="card">
